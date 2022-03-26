@@ -1,0 +1,63 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+//colors
+$bg: #f7f7f7;
+$green10: #006648;
+$green20: #387722;
+$green30: #428B26;
+$green40: #3D8023;
+$green50: #4DA32E;
+$green60: #52AE30;
+$green70: #6BCC47;
+$green80: #EDF9E8;
+$accentTexActive: #3B7B23;
+$bgDark: #4A4A4A;
+$bgRed: #FF435A;
+$bgRedDark: #D13448;
+$textDisable: #9E9E9E;
+$bgDisable: #BFBFBF;
+$bgWarn: #FFCC00;
+$bgWarnDark: #FF8533;
+$text: #333;
+$grey: #767676;
+$grey10: #F5F5F5;
+$grey20: #EEEEEE;
+$grey30: #757575;
+$grey40: #6E6E6E;
+$grey50: #494949;
+$grey60: #545454;
+$grey70: #E4E4E4;
+$darkGrey: #333333;
+$greysLightGrey: #F7F7F9;
+$white: #fff;
+$notifications: #1B82E3;
+$divider: #EDEDED;
+$dropdownBorder: #F1F1F1;
+$chipsBg: #DBEBFB;
+
+$warning: #FFF0E5;
+$warningText: #D14400;
+
+$errorText: #FF6600;
+
+$block_border: #EBEBEB;
+$text: #4a4a4a;
+$title: #2E2E2E;
+$link: #339900;
+$overlay: #aee39b;
+$fieldBorder: #E6E6E6;
+$bgFilledInput: #F8FFF6;
+$messageIn: #F7F7F8;
+$messageOut: rgba(#74BE59, 20%);
+
+//other vars
+$radius: 8px;
+$indent: 15px;
+
+// font-size
+$fieldFontSizeLg: 18px;
+$fieldFontSizeMd: 16px;
+$fieldFontSizeSm: 14px;
+$fieldFontSizeXs: 12px;

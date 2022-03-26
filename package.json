@@ -1,0 +1,75 @@
+{
+  "name": "vue-component-library",
+  "author": "Egor Zorin",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "build:lib": "vue-cli-service build --target lib --name cjp-components ./src/index.ts  && cp package.json src/styles/* dist/ && mkdir dist/src && cp -r src/styles/ dist/src/styles",
+    "pub": "npm run build:lib && npm publish dist",
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "main": "vue-components.common.js",
+  "publishConfig": {
+    "registry": "https://registry-of-your-company.com/repository/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zorin-e/vue-components-library.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "core-js": "^3.6.4",
+    "css-reset-and-normalize": "^2.1.0",
+    "jw-paginate": "^1.0.4",
+    "lodash": "^4.17.21",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-inputmask": "^0.2.1",
+    "vue-property-decorator": "^8.4.2",
+    "vue-router": "^3.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/vue": "^6.1.21",
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-typescript": "~4.3.0",
+    "@vue/cli-plugin-unit-jest": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "1.0.0-beta.31",
+    "babel-loader": "^8.2.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "identity-obj-proxy": "^3.0.0",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.8.3",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

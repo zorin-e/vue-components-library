@@ -1,0 +1,81 @@
+@mixin size ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex ($h: null, $v: null) {
+  display: flex;
+  @if($h) { justify-content: $h; }
+  @if($v) { align-items: $v; }
+}
+
+@mixin size ($w: null, $h: null) {
+  @if($w) { width: $w; }
+  @if($h) { height: $h; }
+  @else if($w) { height: $w }
+}
+
+@mixin disabled ($opacity: .5) {
+  opacity: $opacity;
+  pointer-events: none;
+}
+
+@mixin buttonDefault ($background: '#fff', $color: '#000', $border: '#000') {
+  background: $background;
+  color: $color;
+  stroke: $color;
+  border: 0.5px solid $border;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+@mixin buttonHover ($background: '#fff', $color: '#000', $border: '#000') {
+  background: $background;
+  border: 0.5px solid $border;
+  color: $color;
+  stroke: $color;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+@mixin buttonFocus ($shadow: '#fff', $color: '#000', $border: '#000') {
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px $shadow;
+  border: 0.5px solid $border;
+  color: $color;
+  stroke: $color;
+}
+
+@mixin fieldShadow {
+  box-shadow: 0px 0px 1px 3px rgba(94, 199, 56, 0.5);
+}
+
+@mixin input($size: null, $paddingT: null, $paddingH: null, $paddingB: null, $radius: 8px) {
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($paddingH & $paddingB & $paddingT) {
+    padding: $paddingT $paddingH $paddingB;
+  } @else if($paddingT & $paddingH) {
+    padding: $paddingT $paddingH;
+  }
+  border-radius: $radius;
+}
+
+@mixin arrow($size: null, $side: 'left', $centered: false, $color: null) {
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  @if ($side == 'left') { border-left: $size solid $color; }
+  @else { border-right: $size solid $color; }
+  @if ($centered) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin fileUploader($background, $borderStyle, $borderColor) {
+  background: $background;
+  border: 1px $borderStyle $borderColor;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
