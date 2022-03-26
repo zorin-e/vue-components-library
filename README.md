@@ -1,4 +1,4 @@
-# cj-partners-vue-components
+# vue-components-library
 
 ## Project setup
 ```

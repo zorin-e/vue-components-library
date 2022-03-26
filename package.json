@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "build:lib": "vue-cli-service build --target lib --name cjp-components ./src/index.ts  && cp package.json src/styles/* dist/ && mkdir dist/src && cp -r src/styles/ dist/src/styles",
+    "build:lib": "vue-cli-service build --target lib --name vue-components ./src/index.ts  && cp package.json src/styles/* dist/ && mkdir dist/src && cp -r src/styles/ dist/src/styles",
     "pub": "npm run build:lib && npm publish dist",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
